@@ -6,9 +6,6 @@ from supabase import create_client
 from datetime import datetime
 from ippu_form import ippu_data_form
 from waste_form import waste_data_form
-import ghg_inventory
-import knowledge_library
-import btr_section
 
 # Try to import supabase client; handle gracefully if missing
 SUPABASE_AVAILABLE = True
@@ -376,4 +373,5 @@ def main():
         st.rerun()
 
 if __name__ == "__main__":
+
     main()
