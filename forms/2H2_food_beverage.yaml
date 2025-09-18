@@ -1,0 +1,11 @@
+fields:
+  - name: subcategory_2h
+    label: Subcategory 2H
+    type: select
+    options: ["2H2 - Food and Beverages Industry"]
+    required: true
+  - name: food_beverage_produced_tonnes
+    label: Food and beverage produced
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"

@@ -1,0 +1,42 @@
+fields:
+  - name: subcategory_2g
+    label: Subcategory 2G
+    type: select
+    options: ["2G2 – SF₆ and PFCs from Other Product Uses"]
+    required: true
+  - name: use_sf6_pfc_non_electrical
+    label: Use SF6/PFC for non-electrical purposes?
+    type: radio
+    options: ["Yes", "No"]
+  - name: awacs_aircraft_count
+    label: AWACS aircraft count
+    type: number
+  - name: research_particle_accelerators_count
+    label: Research particle accelerators count
+    type: number
+  - name: industrial_particle_accelerators_high_voltage_count
+    label: Industrial particle accelerators (high voltage) count
+    type: number
+  - name: industrial_particle_accelerators_low_voltage_count
+    label: Industrial particle accelerators (low voltage) count
+    type: number
+  - name: medical_radiotherapy_units_count
+    label: Medical radiotherapy units count
+    type: number
+  - name: soundproof_windows_sales_volume
+    label: Soundproof windows sales volume
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: produce_cosmetic_medical_pfc
+    label: Produce cosmetic/medical PFC?
+    type: radio
+    options: ["Yes", "No"]
+  - name: sf6_pfc_other_uses
+    label: Other uses of SF6/PFC
+    type: text
+  - name: sf6_pfc_sales_other_uses
+    label: SF6/PFC sales for other uses
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"

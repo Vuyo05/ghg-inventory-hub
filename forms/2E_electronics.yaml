@@ -1,0 +1,5 @@
+fields:
+  # Note: No specific fields provided for 2E, so this is a placeholder. Please provide fields if needed.
+  - name: electronics_subcategory
+    label: Electronics Subcategory
+    type: text

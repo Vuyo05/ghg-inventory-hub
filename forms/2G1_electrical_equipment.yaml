@@ -1,0 +1,32 @@
+fields:
+  - name: subcategory_2g
+    label: Subcategory 2G
+    type: select
+    options: ["2G1 – Electrical Equipment"]
+    required: true
+  - name: supply_electrical_equipment
+    label: Supply electrical equipment?
+    type: radio
+    options: ["Yes", "No"]
+  - name: electrical_equipment_sf6_pfc
+    label: Electrical equipment (SF6/PFC)
+    type: text
+  - name: fluorinated_gases_manufacturing_kg
+    label: Fluorinated gases in manufacturing
+    type: number
+    unit_options: ["kg"]
+  - name: use_sf6_pfc_installation
+    label: Use SF6/PFC in installation?
+    type: radio
+    options: ["Yes", "No"]
+  - name: fluorinated_gases_installation_kg
+    label: Fluorinated gases in installation
+    type: number
+    unit_options: ["kg"]
+  - name: fluorinated_gases_nameplate_capacity_kg
+    label: Fluorinated gases nameplate capacity
+    type: number
+    unit_options: ["kg"]
+  - name: units_used
+    label: Units Used
+    type: text

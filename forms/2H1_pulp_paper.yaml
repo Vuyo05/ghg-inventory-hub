@@ -1,0 +1,11 @@
+fields:
+  - name: subcategory_2h
+    label: Subcategory 2H
+    type: select
+    options: ["2H1 - Pulp and Paper Industry"]
+    required: true
+  - name: dry_pulp_produced_tonnes
+    label: Dry pulp produced
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"

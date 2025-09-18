@@ -1,0 +1,58 @@
+fields:
+  - name: name
+    label: Data Provider Name
+    type: text
+    required: true
+  - name: email
+    label: Email
+    type: text
+    required: true
+  - name: data_provider
+    label: Organization
+    type: text
+    required: true
+  - name: provider_contact_person
+    label: Contact Person
+    type: text
+    required: true
+  - name: position
+    label: Position
+    type: text
+  - name: contact_email
+    label: Contact Email
+    type: text
+  - name: contact_phone
+    label: Contact Phone
+    type: text
+  - name: data_request_date
+    label: Data Request Date
+    type: date
+  - name: data_supply_date
+    label: Data Supply Date
+    type: date
+  - name: data_year
+    label: Data Year
+    type: multiselect
+    options: ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"]
+    required: true
+  - name: institution_type
+    label: Pick the title that applies to you institution. *
+    type: select
+    options:
+      - Eswatini Environmental Authority - Regulator
+      - Ministry of Health - Regulator
+      - Ministry of Health - Incinerator operator
+      - Local Authorities (Municipalities)
+      - Company Town
+      - Waste Management Companies
+      - Individual companies
+    required: true
+  - name: population_jurisdiction
+    label: Please give the population of your jurisdiction. *
+    type: number
+    required: true
+  - name: waste_subcategory
+    label: Select Waste Subcategories
+    type: multiselect
+    options: ["4A - Solid Waste Disposal", "4B - Biological Treatment of Solid Waste", "4C - Incineration and Open Burning of Waste", "4D - Wastewater Treatment and Discharge", "4E - Other"]
+    required: true

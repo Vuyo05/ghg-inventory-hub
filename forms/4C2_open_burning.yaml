@@ -1,0 +1,28 @@
+fields:
+  - name: waste_generation_per_capita
+    label: What is the estimated per capita waste generation in your area (kg/person/day)
+    type: number
+    unit_options:
+      - kg/person/day
+    required_unit: kg/person/day
+    required: true
+  - name: total_waste_openly_burned
+    label: What is the estimated total amount of waste openly burned annually in your area? (tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: waste_characterization_data
+    label: Do you have waste characterization data?
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: waste_types_breakdown
+    label: Please give a breakdown of the waste types.
+    type: text
+  - name: hazardous_vs_nonhazardous_breakdown
+    label: Please provide a breakdown on hazardous vs non-hazardous waste.
+    type: text

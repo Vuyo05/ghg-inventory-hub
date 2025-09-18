@@ -1,0 +1,47 @@
+fields:
+  - name: supply_industrial_lubricants_greases
+    label: Supply of industrial lubricants & greases?
+    type: radio
+    options: ["Yes", "No"]
+  - name: lubricant_grease_types
+    label: Types of lubricants and greases supplied
+    type: text
+  - name: total_mass_motor_oils_tonnes
+    label: Total mass of motor oils
+    type: number
+    unit_options: ["tonnes", "kg", "litres"]
+    required_unit: "tonnes"
+  - name: carbon_content_motor_oils_tonnes_c
+    label: Carbon content of motor oils
+    type: number
+    unit_options: ["tonnes C", "kg C"]
+    required_unit: "tonnes C"
+  - name: total_mass_industrial_oils_tonnes
+    label: Total mass of industrial oils
+    type: number
+    unit_options: ["tonnes", "kg", "litres"]
+    required_unit: "tonnes"
+  - name: carbon_content_industrial_oils_tonnes_c
+    label: Carbon content of industrial oils
+    type: number
+    unit_options: ["tonnes C", "kg C"]
+    required_unit: "tonnes C"
+  - name: total_mass_greases_tonnes
+    label: Total mass of greases
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: carbon_content_greases_tonnes_c
+    label: Carbon content of greases
+    type: number
+    unit_options: ["tonnes C", "kg C"]
+    required_unit: "tonnes C"
+  - name: supply_paraffin_wax
+    label: Do you supply paraffin wax?
+    type: radio
+    options: ["Yes", "No"]
+  - name: mass_paraffin_wax_tonnes
+    label: Mass of paraffin wax supplied
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"

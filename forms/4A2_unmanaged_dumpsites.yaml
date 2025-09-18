@@ -1,0 +1,34 @@
+fields:
+  - name: vehicle_type
+    label: What do you use to collect your MSW? (Van, Truck, Tractor)
+    type: select
+    options:
+      - Van
+      - Truck
+      - Tractor
+    required: true
+  - name: collections_per_year
+    label: How many collections do you make per year using the vehicle?
+    type: number
+    required: true
+  - name: vehicle_volume_estimate
+    label: Please give an estimate of the volume of the vehicle used for waste collection.
+    type: number
+    unit_options:
+      - m³
+    required_unit: m³
+    required: true
+  - name: mass_waste_recycled_annually
+    label: Mass of waste recycled annually. (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: mass_waste_composted_annually
+    label: Mass of waste composted annually. (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true

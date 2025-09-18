@@ -1,0 +1,22 @@
+fields:
+  - name: population_jurisdiction
+    label: Please give the population of your jurisdiction.
+    type: number
+    required: true
+  - name: num_beds_health_facilities
+    label: Please state the number of beds in health facilities around the country.
+    type: number
+    required: true
+  - name: waste_generation_rate_per_bed
+    label: Please state the waste generation rate per bed, per day if known.
+    type: number
+    unit_options:
+      - kg/bed/day
+    required_unit: kg/bed/day
+  - name: total_incinerated_health_waste
+    label: Please state the total incinerated health waste in the country including Public and Private Health Institution.
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true

@@ -1,0 +1,10 @@
+fields:
+  - name: subcategory_2g
+    label: Subcategory 2G
+    type: select
+    options: ["2G3 – N₂O from Product Uses"]
+    required: true
+  - name: mass_n2o_supplied_kg
+    label: Mass of N2O supplied
+    type: number
+    unit_options: ["kg"]

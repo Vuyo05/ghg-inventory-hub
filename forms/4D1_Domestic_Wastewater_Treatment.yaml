@@ -1,0 +1,89 @@
+fields:
+  - name: wastewater_treatment_methods
+    label: Which of the following methods do you use for domestic wastewater treatment or management? *
+    type: multiselect
+    options:
+      - Untreated – discharged directly to water bodies (e.g., rivers, streams)
+      - Untreated – discharged into open sewers or ditches
+      - Centralized aerobic treatment (e.g., municipal wastewater plants – well managed)
+      - Centralized aerobic treatment (e.g., municipal wastewater plants – not well managed)
+      - Septic tanks or on-site septic systems
+      - Latrines or other basic on-site sanitation systems
+      - Anaerobic lagoons
+      - Anaerobic digesters or biogas systems
+      - Other, including open defecation
+    required: true
+  - name: proportion_untreated_water_bodies
+    label: Please provide the proportion of domestic wastewater treated or managed using Untreated – discharged to water bodies.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Untreated – discharged directly to water bodies (e.g., rivers, streams)' in wastewater_treatment_methods
+  - name: proportion_untreated_open_sewers
+    label: Please provide the proportion of domestic wastewater treated or managed using Untreated – discharged to open sewers.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Untreated – discharged into open sewers or ditches' in wastewater_treatment_methods
+  - name: proportion_centralized_aerobic_well_managed
+    label: Please provide the proportion of domestic wastewater treated or managed using Centralized aerobic treatment (well-managed).
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Centralized aerobic treatment (e.g., municipal wastewater plants – well managed)' in wastewater_treatment_methods
+  - name: proportion_centralized_aerobic_not_well_managed
+    label: Please provide the proportion of domestic wastewater treated or managed using Centralized aerobic treatment (not well-managed).
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Centralized aerobic treatment (e.g., municipal wastewater plants – not well managed)' in wastewater_treatment_methods
+  - name: proportion_septic_systems
+    label: Please provide the proportion of domestic wastewater treated or managed using Septic systems.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Septic tanks or on-site septic systems' in wastewater_treatment_methods
+  - name: proportion_latrines_on_site
+    label: Please provide the proportion of domestic wastewater treated or managed using Latrines or other on-site systems
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Latrines or other basic on-site sanitation systems' in wastewater_treatment_methods
+  - name: proportion_anaerobic_lagoons
+    label: Please provide the proportion of domestic wastewater treated or managed using Anaerobic lagoons
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Anaerobic lagoons' in wastewater_treatment_methods
+  - name: proportion_anaerobic_digesters
+    label: Please provide the proportion of domestic wastewater treated or managed using Anaerobic digesters
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Anaerobic digesters or biogas systems' in wastewater_treatment_methods
+  - name: other_specify
+    label: If other please specify.
+    type: text
+    condition: 'Other, including open defecation' in wastewater_treatment_methods
+  - name: methane_recovery_practice
+    label: Do you practice methane (CH₄) recovery in domestic wastewater treatment systems? This includes the flaring of methane to produce Carbon Dioxide.
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: methane_recovered_annually
+    label: Please provide an estimate of how much methane is recovered annually if known. (kg per year)
+    type: number
+    unit_options:
+      - kg
+    required_unit: kg
+    condition: methane_recovery_practice == 'Yes'

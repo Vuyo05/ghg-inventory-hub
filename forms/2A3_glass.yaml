@@ -1,0 +1,66 @@
+fields:
+  - name: mineral_industry_subcategory
+    label: Mineral Industry Subcategory
+    type: select
+    options: ["2A3 - Glass Production"]
+    required: true
+  - name: mass_glass_produced_tonnes
+    label: Mass of glass produced
+    type: number
+    unit_options: ["tonnes", "kg", "lb"]
+    required_unit: "tonnes"
+  - name: recycled_glass_fraction
+    label: Fraction of recycled glass used (0-1)
+    type: number
+  - name: uses_100_percent_recycled
+    label: Do you use 100% recycled materials?
+    type: radio
+    options: ["Yes", "No"]
+  - name: virgin_material_mass_tonnes
+    label: Mass of virgin material used
+    type: number
+    unit_options: ["tonnes", "kg", "lb"]
+    required_unit: "tonnes"
+  - name: carbonates_consumed_mass_tonnes
+    label: Mass of carbonates consumed
+    type: number
+    unit_options: ["tonnes", "kg", "lb"]
+    required_unit: "tonnes"
+  - name: fraction_calcination
+    label: Fraction calcination achieved (if known)
+    type: number
+  - name: emissions_factor_tco2
+    label: Emissions factor (tCO₂/t carbonate)
+    type: number
+
+tables:
+  - name: glass_production_types
+    label: Enterprise and glass produced separately
+    columns:
+      - { name: glass_type, label: "Type of glass produced" }
+      - { name: amount, label: "Amount of glass produced" }
+  - name: carbonates_feedstock_quantities
+    label: Carbonates used as feedstock
+    columns:
+      - { name: carbonate_type, label: "Carbonate Feedstock Type" }
+      - { name: quantity, label: "Quantity used" }
+      - { name: unit, label: "Unit" }
+
+fields_after_tables:
+  - name: glass_containers_thousand_units
+    label: Glass containers used in packaging
+    type: number
+    unit_options: ["thousand units"]
+  - name: glass_waste_recycled_tonnes
+    label: Broken glass waste sent for recycling
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: co2_capture_volume_tonnes
+    label: Annual CO₂ capture volume (if any)
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: units
+    label: Units
+    type: text

@@ -1,0 +1,74 @@
+fields:
+  - name: total_waste_generated
+    label: Total amount of waste generated. (Tonnes per year) *
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: waste_generation_rate_per_capita
+    label: What is the national waste generation rate per capita? *
+    type: number
+    unit_options:
+      - kg/person/year
+    required_unit: kg/person/year
+    required: true
+  - name: waste_types_breakdown
+    label: Please give a breakdown of the waste types. *
+    type: text
+    required: true
+  - name: hazardous_vs_nonhazardous_breakdown
+    label: Please provide a breakdown on hazardous vs non-hazardous waste.
+    type: text
+  - name: waste_management_facilities
+    label: What type of waste management facilities exist in the country?
+    type: multiselect
+    options:
+      - Landfills
+      - Controlled dumpsites
+      - Uncontrolled dumpsites
+      - Backyard pit and Open Burning
+      - Other
+  - name: num_landfills
+    label: How many landfills are in the country
+    type: number
+    required: true
+  - name: num_controlled_dumpsites
+    label: How many controlled dumpsites are in the country?
+    type: number
+    required: true
+  - name: num_uncontrolled_dumpsites
+    label: How many uncontrolled dumpsites are in the country?
+    type: number
+    required: true
+  - name: waste_managed_backyard_open_burning_composting
+    label: What percentage of waste is managed through Backyard pits, Open Burning and Composting?
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    required: true
+  - name: waste_recycled_annually
+    label: What percentage of waste is recycled annually?
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    required: true
+  - name: waste_composted_annually
+    label: What percentage of waste is composted annually?
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    required: true
+  - name: population_jurisdiction
+    label: Please give the population of your jurisdiction.
+    type: number
+    required: true
+  - name: total_incinerated_waste
+    label: Mass of total incinerated waste.
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes

@@ -1,0 +1,26 @@
+fields:
+  - name: total_mass_healthcare_risk_waste
+    label: Total mass of health care risk waste incinerated annually. (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: incinerator_chambers
+    label: Please select the number of chambers your incinerator has.
+    type: select
+    options:
+      - Single chamber
+      - Double chamber
+    required: true
+  - name: incinerator_temperature
+    label: At what temperature is your incinerator operated at?
+    type: number
+    unit_options:
+      - °C
+    required_unit: °C
+    required: true
+  - name: chamber_temperatures
+    label: Please state the temperature each chamber is operated at.
+    type: text
+    condition: incinerator_chambers == 'Double chamber'

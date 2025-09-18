@@ -1,0 +1,101 @@
+fields:
+  - name: wastewater_treatment_methods
+    label: Which of the following methods do you use for Industrial wastewater treatment or management? *
+    type: multiselect
+    options:
+      - Untreated – discharged directly to water bodies (e.g., rivers, streams)
+      - Untreated – discharged into open sewers or ditches
+      - Centralized aerobic treatment (e.g., municipal wastewater plants – well managed)
+      - Centralized aerobic treatment (e.g., municipal wastewater plants – not well managed)
+      - Septic tanks or on-site septic systems
+      - Latrines or other basic on-site sanitation systems
+      - Anaerobic lagoons
+      - Anaerobic digesters or biogas systems
+      - Other, including open defecation
+    required: true
+  - name: treated_in_domestic_systems
+    label: Is your industrial wastewater treated in domestic wastewater systems?
+    type: select
+    options:
+      - Yes
+      - No
+      - Unsure
+    required: true
+  - name: active_industries
+    label: Which of the following industries that produce wastewater are you active in?
+    type: multiselect
+    options:
+      - Food & Beverage (e.g., sugar, beer, dairy)
+      - Slaughterhouses or meat processing
+      - Pulp and paper
+      - Textiles
+      - Petrochemical
+      - Other
+    required: true
+  - name: proportion_food_beverage
+    label: Please state the proportion of wastewater as a result of the Food & Beverage Industry.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Food & Beverage (e.g., sugar, beer, dairy)' in active_industries
+  - name: proportion_slaughterhouses
+    label: Please state the proportion of wastewater as a result of the Slaughterhouses or meat processing Industry.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Slaughterhouses or meat processing' in active_industries
+  - name: proportion_pulp_paper
+    label: Please state the proportion of wastewater as a result of the Paper and Pulp Industry.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Pulp and paper' in active_industries
+  - name: proportion_textiles
+    label: Please state the proportion of wastewater as a result of the Textiles Industry.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Textiles' in active_industries
+  - name: proportion_petrochemical
+    label: Please state the proportion of wastewater as a result of the Petrochemicals Industry.
+    type: number
+    unit_options:
+      - %
+    required_unit: %
+    condition: 'Petrochemical' in active_industries
+  - name: other_specify
+    label: If other please specify.
+    type: text
+    condition: 'Other' in active_industries
+  - name: methane_recovery_practice
+    label: Do you practice methane (CH₄) recovery in your wastewater treatment systems? This includes the flaring of methane to produce Carbon Dioxide.
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: methane_recovered_annually
+    label: How much methane is recovered, if known? (kg per year)
+    type: number
+    unit_options:
+      - kg
+    required_unit: kg
+    condition: methane_recovery_practice == 'Yes'
+  - name: sludge_removal
+    label: Do you have sludge removed from wastewater?
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: sludge_disposal
+    label: Please state what happens to the sludge once it has been removed.
+    type: multiselect
+    options:
+      - Stored on site
+      - Utilized by farmers
+    condition: sludge_removal == 'Yes'

@@ -1,0 +1,49 @@
+fields:
+  - name: supply_foam_blowing_agents
+    label: Supply foam blowing agents?
+    type: radio
+    options: ["Yes", "No"]
+  - name: foam_blowing_agents_hfcs
+    label: Foam blowing agents (HFCs)
+    type: text
+  - name: mass_hfcs_supplied_tonnes
+    label: Mass of HFCs supplied
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: supply_fire_protection_equipment
+    label: Supply fire protection equipment?
+    type: radio
+    options: ["Yes", "No"]
+  - name: fire_protection_hfcs_pfcs
+    label: Fire protection agents (HFCs/PFCs)
+    type: text
+  - name: mass_gas_fire_protection_tonnes
+    label: Mass of gas for fire protection
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: supply_aerosols
+    label: Supply aerosols?
+    type: radio
+    options: ["Yes", "No"]
+  - name: aerosols_hfcs
+    label: Aerosol agents (HFCs)
+    type: text
+  - name: mass_hfcs_aerosols_tonnes
+    label: Mass of HFCs for aerosols
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"
+  - name: supply_solvents
+    label: Supply solvents?
+    type: radio
+    options: ["Yes", "No"]
+  - name: solvents_hfcs_pfcs
+    label: Solvent agents (HFCs/PFCs)
+    type: text
+  - name: mass_solvents_hfcs_pfcs_tonnes
+    label: Mass of solvents (HFCs/PFCs)
+    type: number
+    unit_options: ["tonnes", "kg"]
+    required_unit: "tonnes"

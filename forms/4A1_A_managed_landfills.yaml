@@ -1,0 +1,49 @@
+fields:
+  - name: total_waste_landfilled
+    label: Total amount of waste landfilled. (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: mass_waste_recycled_annually
+    label: Mass of waste recycled annually? (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: mass_waste_composted_annually
+    label: Mass of waste composted annually. (Tonnes per year)
+    type: number
+    unit_options:
+      - tonnes
+    required_unit: tonnes
+    required: true
+  - name: waste_characterization_data
+    label: Do you have waste characterization data?
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: waste_types_breakdown
+    label: Please give a breakdown of the waste types.
+    type: text
+  - name: hazardous_vs_nonhazardous_breakdown
+    label: Please provide a breakdown on hazardous vs non-hazardous waste.
+    type: text
+  - name: manage_landfill_leachate
+    label: Do you manage landfill leachate?
+    type: select
+    options:
+      - Yes
+      - No
+    required: true
+  - name: volume_leachate_generated
+    label: Volume of leachate generated. (kL per year)
+    type: number
+    unit_options:
+      - kL
+    required_unit: kL
+    condition: manage_landfill_leachate == 'Yes'
