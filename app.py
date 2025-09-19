@@ -6,8 +6,10 @@ from supabase import create_client
 from datetime import datetime
 from ippu_form import ippu_data_form
 from waste_form import waste_data_form
+import inventory_ippu
+import btf_view
 
-# Try to import supabase client; handle gracefully if missing
+#import supabase client (database);
 SUPABASE_AVAILABLE = True
 try:
     from supabase import create_client
@@ -375,3 +377,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
